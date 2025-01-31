@@ -18,10 +18,10 @@ A modern React-based task management application that helps you organize and tra
 ## 🎥 Demo
 
 ### 🖥️ Desktop View
-![Desktop View](desktop-view.png)
+![Desktop View](./src/assets/design/desktop-view.png)
 
 ### 📱 Mobile View
-![Mobile View](mobile-view.png)
+![Mobile View](./src/assets/design/mobile-view.png)
 
 ## 🛠️ Tech Stack
 
