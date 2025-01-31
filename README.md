@@ -2,8 +2,6 @@
 
 A modern React-based task management application that helps you organize and track your daily tasks with reminders.
 
-![Task Tracker Demo](demo.gif)
-
 ## 🚀 Features
 
 - ✅ Create and manage tasks with titles and schedules
