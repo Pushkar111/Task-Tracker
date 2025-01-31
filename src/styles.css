@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: steelblue;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.App {
+  width: 90%;
+  max-width: 31.25rem;
+  margin: 2rem auto;
+  overflow: auto;
+  min-height: 18.75rem;
+  border: 1px solid var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 0.3125rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.header h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  margin: 0.3125rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.task {
+  background: var(--bg-color);
+  margin: 0.3125rem;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+}
+
+.task.reminder {
+  border-left: 0.3125rem solid green;
+}
+
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+.add-form {
+  margin-bottom: 2.5rem;
+}
+
+.form-control {
+  margin: 1.25rem 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-control input {
+  width: 100%;
+  height: 2.5rem;
+  margin: 0.3125rem 0;
+  padding: 0.1875rem 0.4375rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-control-check label {
+  margin: 0;
+  flex: 1;
+}
+
+.form-control-check input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+}
+
+footer {
+  margin-top: 1.875rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .App {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  
+  .form-control-check {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+}
