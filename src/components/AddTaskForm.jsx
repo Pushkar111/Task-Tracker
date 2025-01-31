@@ -5,6 +5,7 @@ export const AddTaskForm = ({ addTask }) => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
 
@@ -34,7 +35,10 @@ export const AddTaskForm = ({ addTask }) => {
         // Add Task to the List
         addTask(data);
 
-        // Clear Form 
+        // Clear the Form
+        reset();
+
+        // Reset the Task
         setTask({
             Task: "",
             DayTime: "",
