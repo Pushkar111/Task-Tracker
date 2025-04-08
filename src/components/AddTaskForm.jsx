@@ -140,7 +140,7 @@ export const AddTaskForm = ({ addTask, onCancel }) => {
 
     const {
         control,
-        register,
+        // register,
         handleSubmit,
         reset,
         formState: { errors, isSubmitting }
