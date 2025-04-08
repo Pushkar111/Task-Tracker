@@ -282,9 +282,9 @@ export const Settings = ({ toggleTheme, currentTheme }) => {
         setSnackbar({ ...snackbar, open: false });
     };
 
-    const handleClearDataClick = () => {
-        setClearDataDialogOpen(true);
-    };
+    // const handleClearDataClick = () => {
+    //     setClearDataDialogOpen(true);
+    // };
 
     const cardVariants = {
         hidden: { opacity: 0, y: 20 },

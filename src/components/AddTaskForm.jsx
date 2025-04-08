@@ -21,7 +21,6 @@ import {
 } from "@mui/material";
 import { 
     Event as EventIcon, 
-    PriorityHigh as PriorityIcon,
     Category as CategoryIcon,
     Description as DescriptionIcon,
     Alarm as AlarmIcon,
@@ -144,7 +143,7 @@ export const AddTaskForm = ({ addTask, onCancel }) => {
         register,
         handleSubmit,
         reset,
-        formState: { errors, isSubmitting, isValid, isDirty }
+        formState: { errors, isSubmitting }
     } = useForm({
         defaultValues: {
             Task: "",

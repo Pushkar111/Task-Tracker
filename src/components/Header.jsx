@@ -5,7 +5,7 @@ import {
     Divider, ListItemIcon, Button, useMediaQuery,
     Dialog, DialogTitle, DialogContent, DialogActions, 
     List, ListItem, ListItemText, Stack,
-    SwipeableDrawer, Paper, AppBar, Slide, Chip
+    SwipeableDrawer, AppBar, Slide, Chip
 } from "@mui/material";
 import {
     Search as SearchIcon,
@@ -15,14 +15,11 @@ import {
     Help as HelpIcon,
     Settings as SettingsIcon,
     Logout as LogoutIcon,
-    AccountCircle as AccountCircleIcon,
-    ChevronLeft,
     AccessTime as TimeIcon,
     CheckCircleOutlined as CheckIcon,
     Person as PersonIcon,
     NightsStay as NightIcon,
     LightMode as DayIcon,
-    FilterList as FilterIcon,
     Assignment as TaskIcon,
 } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
@@ -32,9 +29,7 @@ import { useNavigate } from "react-router-dom";
 export const Header = ({ title, onAdd, showAdd, onSearchChange, searchValue, onLogout, onToggleSidebar }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     const isSmallScreen = useMediaQuery('(max-width:480px)');
-    const isLargeScreen = useMediaQuery('(min-width:1200px)');
     const { currentUser } = useAuth();
     const navigate = useNavigate();
     

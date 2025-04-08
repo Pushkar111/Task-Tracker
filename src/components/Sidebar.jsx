@@ -17,7 +17,6 @@ import {
     Avatar,
     Badge,
     alpha,
-    Paper,
     SwipeableDrawer,
 } from "@mui/material";
 import {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Paper, Typography, Grid, Box, Divider, useTheme, useMediaQuery, Skeleton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { 
@@ -78,7 +78,6 @@ const DashboardTitle = styled(Typography)(({ theme }) => ({
 export const Analytics = ({ tasks, loading = false }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     
     // Animation variants
     const containerVariants = {

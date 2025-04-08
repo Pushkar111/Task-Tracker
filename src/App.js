@@ -99,8 +99,6 @@ function AppContent() {
         }
 
         let isMounted = true;
-        let retryCount = 0;
-        const maxRetries = 2;
 
         // Add this timeout to ensure auth is fully established
         const timeoutId = setTimeout(async () => {

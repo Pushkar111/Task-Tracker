@@ -1,4 +1,4 @@
-import { collection, query, where, getDocs, addDoc, doc, deleteDoc, updateDoc, serverTimestamp, orderBy, limit, writeBatch } from "firebase/firestore";
+import { collection, query, where, getDocs, addDoc, doc, deleteDoc, updateDoc, serverTimestamp, writeBatch } from "firebase/firestore";
 import { db } from "../firebase/Config";
 
 const TASKS_COLLECTION = "tasks";
