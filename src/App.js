@@ -3,7 +3,7 @@ import { Header } from "./components/Header";
 import { AddTaskForm } from "./components/AddTaskForm";
 import "./styles.css";
 import { Tasks } from "./components/Tasks";
-import { ThemeProvider, CssBaseline, CircularProgress, Box } from "@mui/material";
+import { ThemeProvider, CssBaseline, CircularProgress, Box, alpha } from "@mui/material";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import { Analytics } from "./components/Analytics";
@@ -155,8 +155,8 @@ function AppContent() {
                     color: mode === "dark" ? "#fff" : "#333",
                 },
             });
-        } catch (err) {
-            console.error("Error adding task:", err);
+        } catch (error) {
+            console.error("Error adding task:", error);
             toast.error("Failed to add task", {
                 style: {
                     borderRadius: "10px",
@@ -185,8 +185,8 @@ function AppContent() {
                     color: mode === "dark" ? "#fff" : "#333",
                 },
             });
-        } catch (err) {
-            console.error("Error deleting task:", err);
+        } catch (error) {
+            console.error("Error deleting task:", error);
             toast.error("Failed to delete task", {
                 style: {
                     borderRadius: "10px",
@@ -217,8 +217,8 @@ function AppContent() {
                     color: mode === "dark" ? "#fff" : "#333",
                 },
             });
-        } catch (err) {
-            console.error("Error toggling reminder:", err);
+        } catch (error) {
+            console.error("Error toggling reminder:", error);
             toast.error("Failed to update reminder", {
                 style: {
                     borderRadius: "10px",
@@ -284,8 +284,8 @@ function AppContent() {
                     },
                 });
             }
-        } catch (err) {
-            console.error("Error toggling completion status:", err);
+        } catch (error) {
+            console.error("Error toggling completion status:", error);
             toast.error("Failed to update task status", {
                 style: {
                     borderRadius: "10px",
@@ -312,8 +312,8 @@ function AppContent() {
                     color: mode === "dark" ? "#fff" : "#333",
                 },
             });
-        } catch (err) {
-            console.error("Error updating task:", err);
+        } catch (error) {
+            console.error("Error updating task:", error);
             toast.error("Failed to update task", {
                 style: {
                     borderRadius: "10px",
@@ -424,6 +424,23 @@ function AppContent() {
                                                     minHeight: "200px",
                                                 }}>
                                                 <CircularProgress />
+                                            </Box>
+                                        ) : error ? (
+                                            <Box
+                                                sx={{
+                                                    color: "error.main",
+                                                    p: 2,
+                                                    borderRadius: 1,
+                                                    bgcolor: theme.palette.mode === "dark" ? alpha(theme.palette.error.main, 0.1) : alpha(theme.palette.error.light, 0.2),
+                                                    my: 2,
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    gap: 1,
+                                                }}>
+                                                <span role="img" aria-label="Error">
+                                                    ⚠️
+                                                </span>{" "}
+                                                {error}
                                             </Box>
                                         ) : (
                                             <Tasks tasks={filteredTasks} onDelete={deleteTask} toggleReminder={toggleReminder} toggleComplete={toggleComplete} onTaskUpdate={updateTask} />
