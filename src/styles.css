@@ -138,7 +138,7 @@ footer {
 
 @media (max-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .App {
@@ -149,7 +149,7 @@ footer {
 
 @media (max-width: 480px) {
   html {
-    font-size: 12px;
+    font-size: 15px;
   }
   
   .form-control-check {
@@ -159,6 +159,7 @@ footer {
   
   .btn {
     padding: 0.5rem 1rem;
+    font-size: 1rem; /* Added explicit font size for buttons */
   }
 }
 
